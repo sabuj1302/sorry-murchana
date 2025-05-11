@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Murchana ❤️</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    .box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #e75480;
+    }
+    button {
+      background-color: #e75480;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Hey Murchana 👋</h1>
+    <p>I know I messed up.<br>But hear me out — I’m not another BTech-MBA bro. Promise. 😅</p>
+
+    <button onclick="showMessage()">Click here if you’re still mad at me</button>
+
+    <div id="apology" class="hidden">
+      <p style="margin-top: 30px;">Okay okay... I get it. You're still mad. 😬</p>
+      <p>But for what it's worth — I’m really sorry.</p>
+      <p>You’re thoughtful, kind, and... not easy to forget.</p>
+      <p>If there's even a 1% chance of making things right, I'm showing up.</p>
+      <p>And no, not with a presentation deck this time 🙃</p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('apology').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
