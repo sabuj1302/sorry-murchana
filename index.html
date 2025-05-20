@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For Murchana ❤️</title>
+  <title>Can I Talk to You? 💬</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       background-color: #fff0f5;
-      font-family: 'Arial', sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 50px;
     }
     .box {
-      background: #fff;
-      border-radius: 12px;
+      background: white;
       padding: 30px;
+      border-radius: 12px;
       max-width: 400px;
       margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
     h1 {
-      color: #e75480;
+      color: #d63384;
+    }
+    p {
+      font-size: 18px;
+      color: #444;
     }
     button {
-      background-color: #e75480;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      font-size: 16px;
-      border-radius: 6px;
       margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #d63384;
+      color: white;
+      border-radius: 6px;
       cursor: pointer;
     }
     .hidden {
@@ -39,23 +43,34 @@
 </head>
 <body>
   <div class="box">
-    <h1>Hey Murchana 👋</h1>
-    <p>I know I messed up.<br>But hear me out — I’m not another BTech-MBA bro. Promise. 😅</p>
+    <h1>Can I Talk to You, Murchana? 🥺</h1>
+    <p>You said: “Mujhse baat hee mat karo”</p>
+    <p>But what if you could unlock one message from me…?</p>
 
-    <button onclick="showMessage()">Click here if you’re still mad at me</button>
+    <div id="gameArea">
+      <p id="tapText">Tap the 💗 5 times to unlock my words.</p>
+      <button onclick="tapHeart()">💗 Tap Me</button>
+      <p id="tapCount">Taps: 0/5</p>
+    </div>
 
-    <div id="apology" class="hidden">
-      <p style="margin-top: 30px;">Okay okay... I get it. You're still mad. 😬</p>
-      <p>But for what it's worth — I’m really sorry.</p>
-      <p>You’re thoughtful, kind, and... not easy to forget.</p>
-      <p>If there's even a 1% chance of making things right, I'm showing up.</p>
-      <p>And no, not with a presentation deck this time 🙃</p>
+    <div id="finalMsg" class="hidden">
+      <p>You did it. I didn’t expect you to tap all 5 times...</p>
+      <p>Here’s what I want to say:</p>
+      <p style="margin-top:15px; font-weight:bold;">I know I messed up. I don’t want to force a chat…</p>
+      <p>Just want you to know I care. Truly. And if someday you're ready, I’ll still be here — not to argue, just to talk.</p>
+      <p>Until then... stay as wonderful as you are, Murchana. 💛</p>
     </div>
   </div>
 
   <script>
-    function showMessage() {
-      document.getElementById('apology').classList.remove('hidden');
+    let tapCount = 0;
+    function tapHeart() {
+      tapCount++;
+      document.getElementById('tapCount').innerText = `Taps: ${tapCount}/5`;
+      if (tapCount >= 5) {
+        document.getElementById('gameArea').classList.add('hidden');
+        document.getElementById('finalMsg').classList.remove('hidden');
+      }
     }
   </script>
 </body>
